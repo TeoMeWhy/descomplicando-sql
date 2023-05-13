@@ -1,10 +1,10 @@
 -- Databricks notebook source
 -- MAGIC %md
--- MAGIC 
+-- MAGIC
 -- MAGIC # Exercícios de Fixação
--- MAGIC 
+-- MAGIC
 -- MAGIC ![Banco de dados Olist](https://github.com/TeoMeWhy/descomplicando-sql/blob/main/img/banco_olist.png?raw=true)
--- MAGIC 
+-- MAGIC
 -- MAGIC 1. Qual categoria tem mais produtos vendidos?
 -- MAGIC 2. Qual categoria tem produtos mais caros, em média? E Mediana?
 -- MAGIC 3. Qual categoria tem maiores fretes, em média?
@@ -158,6 +158,8 @@ WHERE t1.dtEntregue IS NOT NULL
 
 GROUP BY t2.descUF
 ORDER BY qtdeDias DESC
+
+LIMIT 1
 
 -- COMMAND ----------
 

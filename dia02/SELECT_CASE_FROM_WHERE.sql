@@ -18,7 +18,7 @@ SELECT *,
        CASE
            WHEN vlFrete / (vlPreco + vlFrete) = 0 THEN 'Frete Gratuito'
            WHEN vlFrete / (vlPreco + vlFrete) <= 0.2 THEN 'Frete Baixo'
-           WHEN vlFrete / (vlPreco + vlFrete) = 0.4 THEN 'Frete Médio'
+           WHEN vlFrete / (vlPreco + vlFrete) <= 0.4 THEN 'Frete Médio'
            ELSE 'Frete Alto'
        END AS fxFrete
 

@@ -228,3 +228,22 @@ FROM tb_group
 
 -- DBTITLE 1,Exercício 07 - PLUS
 -- Selecione um dia de venda aleatório de cada vendedor.
+
+WITH tb_dia_vendedor AS (
+
+  SELECT DISTINCT t1.idVendedor,
+        date(t2.dtPedido) AS dtPedido
+
+  FROM silver.olist.item_pedido AS t1
+
+  INNER JOIN silver.olist.pedido AS t2
+  ON t1.idPedido = t2.idPedido
+
+)
+
+SELECT *,
+       row_number() OVER (PARTITION BY idVendedor ORDER BY RAND()) AS rnVendedor
+
+FROM tb_dia_vendedor
+
+QUALIFY rnVendedor <= 2

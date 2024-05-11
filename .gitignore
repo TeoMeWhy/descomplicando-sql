@@ -2,3 +2,4 @@ mariadb-volume
 *.db
 etl.py
 */data/query.sql
+*.env

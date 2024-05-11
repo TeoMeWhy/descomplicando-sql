@@ -24,5 +24,5 @@ str_con = "sqlite:///database.db"
 
 Para MariaDB/MySQL:
 ```python
-str_con = "pymysql+pymysql://user:pass@ip:port/schema"
+str_con = "mysql+pymysql://user:pass@ip:port/schema"
 ```
